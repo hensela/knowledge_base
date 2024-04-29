@@ -1,8 +1,12 @@
 # Classification: KNN: K-nearest neighbors
 
+<details>
+<summary><h3>Details</h3></summary>
 - Calculate distances between new input all the training data points
 - Sort the distances and determine the $𝑘$ nearest neighbors
 - Analyze the category of those neighbors and assign the category for the new data point based on majority vote
+
+<details>
 
 
 # Classification (Regression): Support Vector Machines (SVM)
@@ -17,7 +21,8 @@
 
 </details>
 
-### Idea
+<details>
+<summary><h3>Idea</h3></summary>
 
 Solving a classification problem whose data is not linearly separable. 2 approaches:
 
@@ -26,7 +31,10 @@ Solving a classification problem whose data is not linearly separable. 2 approac
 
 SVM can be adapted also for regression problems (as well as multiclass classification problems)
 
-### Option 1: Allow misclassifications
+</details>
+
+<details>
+<summary><h3>Option 1: Allow misclassifications</h3></summary>
 
 Set a "margin" that should ideally be achieved in the separation of the 2 classes. 
 Penalize every training point that's within this margin (both on the correct side or on the wrong side of the separating line). 
@@ -35,7 +43,10 @@ The sensitivity (i.e. the size of this margin) can be specified.
 An infinite sensitivity corresponds to the linearly separable case, where a low sensitivity also takes into consideration data further away from the decision boundary. 
 In this way, SVM can also make a better bias-variance tradeoff.
 
-### Option 2: Kernel methods
+<details>
+
+<details>
+<summary><h3>Option 2: Kernel methods</h3></summary>
 
 The idea is to lift the feature space up to a higher dimensional space by applying transformation functions. 
 If $`\left\{ (x_i, y_i) \right\}_{i=1}^N`$ are the training data points and we have a transformation function $h$, 
@@ -50,3 +61,5 @@ Three popular choices for $K$ in the SVM literature are:
 - $d \text{th}$-Degree polynomial:  $K(x, x') = (1+ \langle x, x' \rangle)^d$
 - Radial basis:  $K(x, x') = exp(−\gamma ||x−x'||^2)$
 - Neural network:  $K(x, x') = tanh( \kappa_1 \langle x, x' \rangle + \kappa_2)$
+
+<details>
