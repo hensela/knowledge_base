@@ -9,3 +9,5 @@
   * Model Assessment
     * [[Partial Dependence and Individual Conditional Expectation|Partial Dependence and Individual Conditional Expectation plots]]
     * [[Shapley values|Shapley values]]
+* Software Engineering
+  * [[Concurrency and parallel computing|Concurrency and parallel computing]]
