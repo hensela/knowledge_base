@@ -1,4 +1,6 @@
-# Classification: K-nearest neighbors (KNN)
+# Supervised Learning
+
+## Classification: K-nearest neighbors (KNN)
 
 <details>
 <summary><b>Details</b></summary>
@@ -10,7 +12,7 @@
 </details>
 
 
-# Classification (Regression): Support Vector Machines (SVM)
+## Classification (Regression): Support Vector Machines (SVM)
 
 <details>
 <summary><b>Resources</b></summary>
@@ -62,7 +64,7 @@ Three popular choices for $K$ in the SVM literature are:
 </details>
 
 
-# Classification: Logistic Regression
+## Classification: Logistic Regression
 
 <details>
 <summary><b>Details</b></summary>
@@ -84,7 +86,7 @@ We cannot use mean squared error as a loss function, as it's non-convex in this 
 </details>
 
 
-# Classification: Performance metrics
+## Classification: Performance metrics
 
 <details>
 <summary><b>Details</b></summary>
@@ -132,7 +134,7 @@ $$−\frac{1}{N} \sum_{𝑖=1}^𝑁{ \left[ 𝑦_𝑖 𝑙𝑜𝑔(𝑝(𝑥_�
 </details>
 
 
-# Classification: How to handle imbalanced classes
+## Classification: How to handle imbalanced classes
 
 <details>
 <summary><b>Details</b></summary>
@@ -153,7 +155,7 @@ If accuracy is the performance metric, the model might end up predicting always 
 </details>
 
 
-# Classification: Multi-class classification
+## Classification: Multi-class classification
 
 <details>
 <summary><b>Option 1: Algorithms that natively support multi-class</b></summary>

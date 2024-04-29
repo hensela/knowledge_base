@@ -1,4 +1,6 @@
-# Principal Component Analysis (PCA)
+# Unsupervised Learning
+
+## Principal Component Analysis (PCA)
 Basically, PCA relies on the singular value decomposition of the matrix of data points, which is of the form  $𝑋=𝑈𝐷𝑉^𝑇$, where both U and V are orthogonal matrices and the first m columns of V are the first m principal components.
 
 **Idea of the algorithm:**
@@ -16,7 +18,7 @@ Hence, the fitted line, corresponds to the direction along which the variance of
 4. To find the next principal component, the restriction of it having to be orthogonal to all the previous ones is added.
 
 
-# K-means clustering
+## K-means clustering
 
 **Initialization:** Randomly assign data points to  $𝑘$ classes
 
@@ -25,7 +27,7 @@ Hence, the fitted line, corresponds to the direction along which the variance of
 2. Determine distances of each data point to the centroids and reassign each data point to the closest cluster centroid
 
 
-# Clustering: Performance metrics
+## Clustering: Performance metrics
 
 - Evaluate supervised downstream tasks (where we have labelled data)
 - Understand "tightness" of the clusters:
