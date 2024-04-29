@@ -119,13 +119,14 @@ _AdaBoost stands for "Adaptive Boosting"_
   2. Call `WeakLearn`, providing it with the distribution $`\mathbf{p}^m`$; get back a hypothesis $`h_m: X \rightarrow [0, 1]`$
   3. Calculate the error of $`h_m`$ as: $`\epsilon_m = \sum_{i}{p_i^m \left| h_m(x_i) - y_i \right|}`$
   4. Calculate the weight of weak learner $`m`$ as (mind the difference between "w" and "omega"): 
-     ```math
+     $$
      \omega_m = \frac{1}{2} log \left( \frac{1 - \epsilon_m}{\epsilon_m} \right)
-     ```
+     $$
   5. Set the new weights vector to be 
-     ```math
+     $$
      p_i^{m+1} = p_i^m e^{\pm \omega_m}
-     ```
+     $$
+
      where the sign in the exponent is positive for incorrectly classified samples and negative for correctly classified samples
   
   
@@ -174,23 +175,24 @@ _AdaBoost stands for "Adaptive Boosting"_
   
   **Iteration:** for $`m = 1,...,M`$
   1. Compute the _pseudo residuals_ for $`i=1,..., N`$:
-  ```math
+  $$
   r_{i,m} = - \frac{\partial L(y_i, F(x_i))}{\partial F(x_i)} \Bigg|_{F(x)=F_{m-1}(x)}
-  ```
+  $$
   Note that $`L`$ is the MSE function, then the $`r_{i,m} = y_i -  F_{m-1}(x_i)`$ are just the residuals.
   
   2. Fit a regression tree to predict the $`\{ r_{i,m} \}_{i=1}^{N}`$ and compute terminal regions (leaves) $`R_{j,m}`$ for $`j=1,..., J_m`$ (i.e. the number of leaves in the weak classifier fitted to the $`\{ r_{i,m} \}_{i=1}^{N}`$ is $`J_m`$)
   
   3. For $`j=1,..., J_m`$ compute 
-     ```math
+     $$
      \gamma_{j,m} = \underset{\gamma}{argmin} \sum_{x_i \in R_{j,m}}{L(y_i, F_{m-1}(x_i) + \gamma)}
-     ```
+     $$
      Again, if $`L`$ is MSE, then $`\gamma_{j,m}`$ is just the average of the residuals that ended up in leaf $`R_{j,m}`$.
   
   4. Update 
-     ```math
+     $$
      F_m(x) = F_{m-1}(x) + \nu \sum_{j=1}^{J_m}{\gamma_{j,m} \mathbf{I}(x \in R_{j,m})}
-     ```
+     $$
+
      where $`\nu \in (0, 1)`$ is called _learning rate_ and $`\mathbf{I}`$ is just the characteristic function.
   
   **Output:** $`F_M(x)`$
@@ -229,14 +231,14 @@ _XGBoost stands for "Extreme Gradient Boosting"_
   In addition to that, like random forests, XGBoost also allows subsampling of features and bootstrapping of training observations, making it less prone to be thrown off by irrelevant features.
   
   The optimization objective for Gradient Boost seen above can be formulated as follows: In the $`m`$-th iteration the $`F_m`$ is found that minimizes the following objective:
-  ```math
+  $$
   \mathcal{L}_m = \sum_{i=1}^{N}{L(y_i, F_{m-1}(x_i) + F_m(x_i))}
-  ```
+  $$
   
   XGBoost adds regularization terms, leading to the following optimization objective in the $`m`$-th iteration:
-  ```math
+  $$
   \mathcal{L}_m = \sum_{i=1}^{N}{L(y_i, F_{m-1}(x_i) + F_m(x_i))} + \gamma T_m + \lambda ||\mathbf{w}_m||^2
-  ```
+  $$
   where:
   - $`\gamma \geq 0`$ is a penalty parameter and $`T_m`$ is the number of leaves in the $`m`$-th tree. Hence, the term $`\gamma T_m`$ is meant to encourage pruning of the tree (i.e. penalize trees with too many leaves)
   - $`\lambda\geq 0`$ is a regularization parameter
