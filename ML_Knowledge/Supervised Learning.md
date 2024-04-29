@@ -80,7 +80,13 @@ $$`h_{\theta} \left( x^i \right) = \frac{1}{1 + e^{−z^i}`$$
 
 The cost function to use is the log-loss / binary cross-entropy:
 
-$$J(\theta) = −\frac{1}{𝑁} \sum_{i=1}^{N} { \left[ y_i log( h_{\theta} (x^i) + (1−y_i) log(1 − h_{\theta}(x^i)) \right]$$
+$$$
+x_i
+$$$
+
+$$$
+J(\theta) = −\frac{1}{𝑁} \sum_{i=1}^{N} { \left[ y_i log( h_{\theta} (x^i) + (1−y_i) log(1 − h_{\theta}(x^i)) \right]
+$$$
  
 We cannot use mean squared error as a loss function, as it's non-convex in this case and has many local minima.
 </details>
