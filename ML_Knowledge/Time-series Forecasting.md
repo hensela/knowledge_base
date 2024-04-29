@@ -112,14 +112,12 @@ Each value of $y_t$ can be thought of as a weighted moving average of the past $
 It's possible to write any stationary $AR(𝑝)$ model as a $MA(\inf)$ model. 
 For example for an $AR(1)$ model:
 
-$$
 \begin{align}
 𝑦_𝑡 &= \phi_1 𝑦_{𝑡−1} + \epsilon_𝑡
     &= \phi_1 ( \phi_1 𝑦_{𝑡−1} + \epsilon_{𝑡−1} ) + \epsilon_t
     &= \phi_1^2 𝑦_{𝑡−1} + \phi_1 \epsilon_{𝑡−1} + \epsilon_𝑡 ... 
     &= \epsilon_𝑡 + \phi_1 \epsilon_{𝑡−1} + \phi_1^2 \epsilon_{𝑡−2} + \phi_1^3 \epsilon_{𝑡−3} + ...
 \end{align}
-$$
  
 The reverse holds under some constraints on the MA parameters, in which case the MA model is called **invertible**.
 </details>
