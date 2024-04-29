@@ -67,18 +67,18 @@ Three popular choices for $K$ in the SVM literature are:
 <details>
 <summary><b>Details</b></summary>
 
-Training observations $`\left\{ (x(i),y(i)) \right\}_{i=1}^N`$, each of which having $m$ features $`x^i = \left( x_1^i,..., x_m^i \right) /in /mathbb{R}^m`$.
+Training observations $`\left\{ (x(i),y(i)) \right\}_{i=1}^N`$, each of which having $m$ features $x^i = \left( x_1^i,..., x_m^i \right) \in \mathbb{R}^m$.
 We fit a linear regression model:
 
-$$`z_i = /theta_0 + /theta_1 x_1^i +...+ /theta_𝑚 x_m^i`$$
+$$z_i = \theta_0 + \theta_1 x_1^i +...+ \theta_𝑚 x_m^i$$
  
 Our prediction will be (sigmoid function):
 
-$$`h_{/theta} \left( x^i \right) = \frac{1}{1 + e^{−z^i}`$$
+$$h_{\theta} \left( x^i \right) = \frac{1}{1 + e^{−z^i}$$
 
 The cost function to use is the log-loss / binary cross-entropy:
 
-$$`J(/theta) = −/frac{1}{𝑁} /sum_{i=1}^{N} { \left[ y_i log( h_{/theta} (x^i) + (1−y_i) log(1 − h_{/theta}(x^i)) \right]`$$
+$$J(\theta) = −\frac{1}{𝑁} \sum_{i=1}^{N} { \left[ y_i log( h_{\theta} (x^i) + (1−y_i) log(1 − h_{\theta}(x^i)) \right]$$
  
 We cannot use mean squared error as a loss function, as it's non-convex in this case and has many local minima.
 </details>
