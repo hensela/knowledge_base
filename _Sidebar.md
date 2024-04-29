@@ -1,3 +1,3 @@
 # ML Knowledge
 
-## [[1. Supervised Learning||./Supervised_Learning.md]]
+## [[1. Supervised Learning|Supervised_Learning]]
