@@ -141,6 +141,6 @@ Autoregressive conditional heteroskedasticity
 - Calculate errors $\epsilon_t$
 - The proposition of $ARCH(𝑝)$ is that the variance $𝑣𝑎𝑟(\epsilon_𝑡) = \sigma_𝑡^2$ can be modelled in an autoregressive fashion as $\sigma_𝑡^2 = \alpha_0 + \alpha_1 \sigma_{𝑡−1}^2 + ... + \alpha_𝑝 \sigma_{𝑡−𝑝}^2$
 - This results in the following form of an $ARCH(𝑝)$ model: 
-$$\epsilon_𝑡 = \sqrt( \omega_𝑡 \alpha_0 + \alpha_1 \sigma_{𝑡−1}^2 + ... + \alpha_𝑝 \sigma_{𝑡−𝑝}^2 )$$
+$$\epsilon_𝑡 = \sqrt{ \omega_𝑡 \alpha_0 + \alpha_1 \sigma_{𝑡−1}^2 + ... + \alpha_𝑝 \sigma_{𝑡−𝑝}^2 }$$
   where $\omega_𝑡$ is white noise
 </details>
