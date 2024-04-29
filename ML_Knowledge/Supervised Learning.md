@@ -6,7 +6,7 @@
 - Sort the distances and determine the $𝑘$ nearest neighbors
 - Analyze the category of those neighbors and assign the category for the new data point based on majority vote
 
-<details>
+</details>
 
 
 # Classification (Regression): Support Vector Machines (SVM)
@@ -43,7 +43,7 @@ The sensitivity (i.e. the size of this margin) can be specified.
 An infinite sensitivity corresponds to the linearly separable case, where a low sensitivity also takes into consideration data further away from the decision boundary. 
 In this way, SVM can also make a better bias-variance tradeoff.
 
-<details>
+</details>
 
 <details>
 <summary><h3>Option 2: Kernel methods</h3></summary>
@@ -62,4 +62,4 @@ Three popular choices for $K$ in the SVM literature are:
 - Radial basis:  $K(x, x') = exp(−\gamma ||x−x'||^2)$
 - Neural network:  $K(x, x') = tanh( \kappa_1 \langle x, x' \rangle + \kappa_2)$
 
-<details>
+</details>
