@@ -34,10 +34,10 @@ Let's consider the case of log-transforming the target variable $y$ and fitting 
 If we use the MAE (mean absolute error) loss function in the log-space, the optimization problem being solved when fitting the model translates to finding the optimum w.r.t. MLAR ("mean log accuracy ratio") in the untransformed space:
 
 $`\begin{aligned} 
-\underset{\theta}{\mathrm{argmin}} MAE(𝑙𝑜𝑔(𝑦), h_{\theta}(𝑥)) &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left| log(y_i) - log(e^{h_{\theta}(x_i) }) \right| }\\
+\underset{\theta}{\mathrm{argmin}} \mathrm{MAE}(𝑙𝑜𝑔(𝑦), h_{\theta}(𝑥)) &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left| log(y_i) - log(e^{h_{\theta}(x_i) }) \right| }\\
     &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left| log \left( \frac{y_i}{e^{h_{\theta}(x_i)}} \right) \right| } \\
-    &= MLAR \left( y,  e^{h_{\theta}(x_i)} \right) \\
-    &\approx MAPE \left( y,  e^{h_{\theta}(x_i)} \right) \text{ } \text{ (same Taylor series argument as below)}
+    &= \underset{\theta}{\mathrm{argmin}} \mathrm{MLAR} \left( y,  e^{h_{\theta}(x_i)} \right) \\
+    &\approx \underset{\theta}{\mathrm{argmin}} \mathrm{MAPE} \left( y,  e^{h_{\theta}(x_i)} \right) \text{ } \text{ (same Taylor series argument as below)}
 \end{aligned}`$ 
 
 
@@ -45,9 +45,9 @@ On the other hand, using the (R)MSE loss function in the log-space (as the squar
 we rediscover an approximation to the argmin of the MSPE (mean squared percentage error) in the untransformed space:
 
 $`\begin{aligned} 
-\underset{\theta}{\mathrm{argmin}} (R)MSE(𝑙𝑜𝑔(𝑦), h_{\theta}(𝑥)) &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( log(y_i) - log(e^{h_{\theta}(x_i) }) \right)^2 }\\
+\underset{\theta}{\mathrm{argmin}} \mathrm{(R)MSE}(𝑙𝑜𝑔(𝑦), h_{\theta}(𝑥)) &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( log(y_i) - log(e^{h_{\theta}(x_i) }) \right)^2 }\\
     &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( log \left( \frac{y_i}{e^{h_{\theta}(x_i)}} \right) \right)^2 } \\
     &\approx \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( 1 - \frac{y_i}{e^{h_{\theta}(x_i)}} \right)^2 } \text{ } \text{ (Taylor series expansion)} \\
-    &\approx \underset{\theta}{\mathrm{argmin}} MSPE \left( y,  e^{h_{\theta}(x_i)} \right)
+    &\approx \underset{\theta}{\mathrm{argmin}} \mathrm{MSPE} \left( y,  e^{h_{\theta}(x_i)} \right)
 \end{aligned}`$ 
 
