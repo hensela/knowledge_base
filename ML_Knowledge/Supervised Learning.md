@@ -2,6 +2,7 @@
 
 <details>
 <summary><h3>Details</h3></summary>
+
 - Calculate distances between new input all the training data points
 - Sort the distances and determine the $𝑘$ nearest neighbors
 - Analyze the category of those neighbors and assign the category for the new data point based on majority vote
@@ -18,7 +19,6 @@
 - ["A Practical Guide to Support Vector Classification"](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
 - Linear kernel: [sklearn.svm.LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
 - More general implemention: [sklearn.svm.SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
-
 </details>
 
 <details>
@@ -30,7 +30,6 @@ Solving a classification problem whose data is not linearly separable. 2 approac
 2. Find a non-linear boundary by constructing a linear boundary in a higher-dimensional transformed feature space
 
 SVM can be adapted also for regression problems (as well as multiclass classification problems)
-
 </details>
 
 <details>
@@ -42,7 +41,6 @@ This leads to a new constraint for the optimization objective.
 The sensitivity (i.e. the size of this margin) can be specified. 
 An infinite sensitivity corresponds to the linearly separable case, where a low sensitivity also takes into consideration data further away from the decision boundary. 
 In this way, SVM can also make a better bias-variance tradeoff.
-
 </details>
 
 <details>
@@ -61,5 +59,4 @@ Three popular choices for $K$ in the SVM literature are:
 - $d \text{th}$-Degree polynomial:  $K(x, x') = (1+ \langle x, x' \rangle)^d$
 - Radial basis:  $K(x, x') = exp(−\gamma ||x−x'||^2)$
 - Neural network:  $K(x, x') = tanh( \kappa_1 \langle x, x' \rangle + \kappa_2)$
-
 </details>
