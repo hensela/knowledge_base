@@ -5,3 +5,4 @@
   * [[Unsupervised Learning|Unsupervised Learning]]
   * [[Time-series Forecasting|Time-series Forecasting]]
   * [[Data Transformations|Data Transformations]]
+  * [[Partial Dependence and Individual Conditional Expectation plots|Partial Dependence and Individual Conditional Expectation plots]]
