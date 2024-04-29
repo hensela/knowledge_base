@@ -6,3 +6,4 @@
   * [[Time-series Forecasting|Time-series Forecasting]]
   * [[Data Transformations|Data Transformations]]
   * [[Partial Dependence and Individual Conditional Expectation plots|Partial Dependence and Individual Conditional Expectation plots]]
+  * [[Shapley values for explainable ML|Shapley values for explainable ML]]
