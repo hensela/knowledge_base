@@ -36,10 +36,18 @@ If we use the MAE (mean absolute error) loss function in the log-space, the opti
 $`\begin{aligned} 
 \underset{\theta}{\mathrm{argmin}} MAE(𝑙𝑜𝑔(𝑦), h_{\theta}(𝑥)) &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left| log(y_i) - log(e^{h_{\theta}(x_i) }) \right| }\\
     &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left| log \left( \frac{y_i}{e^{h_{\theta}(x_i)}} \right) \right| } \\
-    &= MLAR(y,  e^{h_{\theta}(x_i)}) \\
-    &\approx MAPE(y,  e^{h_{\theta}(x_i)}) \text{(same Taylor series argument as below)}
+    &= MLAR \left( y,  e^{h_{\theta}(x_i)} \right) \\
+    &\approx MAPE \left( y,  e^{h_{\theta}(x_i)} \right) \text{ } \text{ (same Taylor series argument as below)}
 \end{aligned}`$ 
 
 
-On the other hand, using the (R)MSE loss function in the log-space (as the square root is a monotone function, the argmin of RMSE and MSE are the same), we rediscover an approximation to the argmin of the MSPE (mean squared percentage error) in the untransformed space:
-argmin 𝜃(R)MSE(𝑙𝑜𝑔(𝑦),ℎ𝜃(𝑥))=argmin𝜃1𝑛∑𝑖(𝑙𝑜𝑔(𝑦𝑖)−𝑙𝑜𝑔(𝑒ℎ𝜃(𝑥𝑖)))2=argmin𝜃1𝑛∑𝑖(𝑙𝑜𝑔(𝑦𝑖𝑒ℎ𝜃(𝑥𝑖)))2≈argmin𝜃1𝑛∑𝑖(1−𝑦𝑖𝑒ℎ𝜃(𝑥𝑖))2 (Taylor series expansion)≈argmin 𝜃MSPE(𝑦,𝑒ℎ𝜃(𝑥))
+On the other hand, using the (R)MSE loss function in the log-space (as the square root is a monotone function, the argmin of RMSE and MSE are the same), 
+we rediscover an approximation to the argmin of the MSPE (mean squared percentage error) in the untransformed space:
+
+$`\begin{aligned} 
+\underset{\theta}{\mathrm{argmin}} (R)MSE(𝑙𝑜𝑔(𝑦), h_{\theta}(𝑥)) &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( log(y_i) - log(e^{h_{\theta}(x_i) }) \right)^2 }\\
+    &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( log \left( \frac{y_i}{e^{h_{\theta}(x_i)}} \right) \right)^2 } \\
+    &\approx \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( 1 - \frac{y_i}{e^{h_{\theta}(x_i)}} \right)^2 } \text{ } \text{ (Taylor series expansion)}
+    &\approx \underset{\theta}{\mathrm{argmin}} MSPE \left( y,  e^{h_{\theta}(x_i)} \right)
+\end{aligned}`$ 
+
