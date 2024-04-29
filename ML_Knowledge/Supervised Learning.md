@@ -1,5 +1,3 @@
-# Supervised Learning
-
 ## Classification: K-nearest neighbors (KNN)
 
 <details>

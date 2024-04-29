@@ -1,5 +1,3 @@
-# Unsupervised Learning
-
 ## Principal Component Analysis (PCA)
 Basically, PCA relies on the singular value decomposition of the matrix of data points, which is of the form  $𝑋=𝑈𝐷𝑉^𝑇$, where both U and V are orthogonal matrices and the first m columns of V are the first m principal components.
 

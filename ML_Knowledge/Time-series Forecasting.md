@@ -1,5 +1,3 @@
-# Time-series Forecasting
-
 Time-series $(y_t)_{t \in \mathbb{N})$.
 
 
