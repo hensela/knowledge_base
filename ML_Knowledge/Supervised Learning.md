@@ -44,6 +44,6 @@ but rather the optimization problem to solve requires only knowledge of the kern
 
 Three popular choices for $K$ in the SVM literature are:
 
-- $d$th-Degree polynomial:  $K(x, x') = (1+ \langle x, x' \rangle)^d$
+- $d/text{th}$-Degree polynomial:  $K(x, x') = (1+ \langle x, x' \rangle)^d$
 - Radial basis:  $K(x, x') = exp(−\gamma ||x−x'||^2)$
 - Neural network:  $K(x, x') = tanh( \kappa_1 \langle x, x' \rangle + \kappa_2)$
