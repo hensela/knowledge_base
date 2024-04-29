@@ -121,3 +121,26 @@ $`\begin{aligned}
  
 The reverse holds under some constraints on the MA parameters, in which case the MA model is called **invertible**.
 </details>
+
+
+## [ARIMA: Autoregressive integrated moving average model](https://otexts.com/fpp2/non-seasonal-arima.html)
+
+Non-seasonal $ARIMA(𝑝,𝑑,𝑞)$ model, with  $𝑦_𝑡'$ being the differenced time-series:
+
+$$𝑦_𝑡' = 𝑐 + \phi_1 𝑦_{𝑡−1}' + ... + \phi_𝑝 𝑦_{𝑡−𝑝}' + \theta_1 \epsilon_{𝑡−1} + ... + \theta_𝑞 \epsilon_{𝑡−𝑞} + \epsilon_𝑡$$
+
+
+## [ARCH](https://www.youtube.com/watch?v=Li95a2biFCU&list=PLvcbYUQ5t0UHOLnBzl46_Q6QKtFgfMGc3&index=13)
+
+Autoregressive conditional heteroskedasticity
+
+<details>
+<summary><b>Idea</b></summary>
+
+- Start by fitting any good model (e.g. ARIMA)
+- Calculate errors $\epsilon_t$
+- The proposition of $ARCH(𝑝)$ is that the variance $𝑣𝑎𝑟(\epsilon_𝑡) = \sigma_𝑡^2$ can be modelled in an autoregressive fashion as $\sigma_𝑡^2 = \alpha_0 + \alpha_1 \sigma_{𝑡−1}^2 + ... + \alpha_𝑝 \sigma_{𝑡−𝑝}^2$
+- This results in the following form of an $ARCH(𝑝)$ model: 
+$$\epsilon_𝑡 = \sqrt( \omega_𝑡 \alpha_0 + \alpha_1 \sigma_{𝑡−1}^2 + ... + \alpha_𝑝 \sigma_{𝑡−𝑝}^2 )$$
+  where $\omega_𝑡$ is white noise
+</details>
