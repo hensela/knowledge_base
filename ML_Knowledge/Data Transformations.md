@@ -8,19 +8,19 @@ Resources:
 
 Care must be taken when applying a non-linear transformation $h$ to the target variable $y$ and fitting the model to predict $𝑧 := h(𝑦)$.
 Depending on the distribution of the target variable and the error metric to be minimized in the original un-transformed space, 
-the optimal prediction in the original space is not necessarily given by $h^{−1}(\hat(z))$ (where $\hat(z)$ is the prediction in the transformed space).
+the optimal prediction in the original space is not necessarily given by $h^{−1}(\hat{z})$ (where $\hat{z}$ is the prediction in the transformed space).
 
-To understand this, assumptions are made on the distribution of the error $z - \hat(z)$ the model makes in the transformed space 
+To understand this, assumptions are made on the distribution of the error $z - \hat{z}$ the model makes in the transformed space 
 (usually that it follows a normal distribution with mean  0). 
 Along with that also assumptions are made on the distribution of $y$ (if a log-transformation is to be applied, usually that it's log-normal distributed) 
-and thus also the distribution of $\hat(y)$ (since we already make assumptions on the distribution of the errors).
+and thus also the distribution of $\hat{y}$ (since we already make assumptions on the distribution of the errors).
 
 To see where the error metric comes in, one actually considers the distribution of $y$ conditioned on an input vecor $x$.
-With this, one can work out that if predictions are made in the original space, for example in the case of MSE, the prediction $\hat(y)_i$
+With this, one can work out that if predictions are made in the original space, for example in the case of MSE, the prediction $\hat{y}_i$
 (where $i$ is the index of an observation with input vector $x_i$) is the expected value of $y | x_i$, 
 whereas in the case of MAE, the prediction $\hat{y}_i$ is the median of $y | x_i$.
 
-Knowing the transformation and the metric to be minimized in the original un-transformed space, one can then work out how theoretically the predictions $\hat(z)_i$
+Knowing the transformation and the metric to be minimized in the original un-transformed space, one can then work out how theoretically the predictions $\hat{z}_i$
 have to be shifted (by an additive factor, in case of log-transformation and log-normal assumptions) in the transformed space before back-transforming to the original space, 
 in order to predict the optimal value as defined by the error metric.
 
