@@ -137,12 +137,12 @@ $$−\frac{1}{N} \sum_{𝑖=1}^𝑁{ \left[ 𝑦_𝑖 𝑙𝑜𝑔(𝑝(𝑥_�
 <details>
 <summary><b>Details</b></summary>
 
-Danger of imbalanced classes:
+**Danger of imbalanced classes:**
 
 If accuracy is the performance metric, the model might end up predicting always the same class
 
 
-Strategies to address imbalanced classes:
+**Strategies to address imbalanced classes:**
 
 - Up-sample minority class
 - Down-sample majority class
@@ -150,4 +150,29 @@ Strategies to address imbalanced classes:
 - Penalize algorithms: Penalize miistakes on the minority class by an amount to how under-represented it is
 - Tree-based algorithms: Hierarchical structure allows them to learn signals from both classes
 - Data augmentation: Up-sample minority class by creating synthetic samples that slightly perturb feature values ([SMOTE](https://arxiv.org/pdf/1106.1813))
+</details>
+
+
+# Classification: Multi-class classification
+
+<details>
+<summary><b>Option 1: Algorithms that natively support multi-class</b></summary>
+
+- K-nearest neighbors
+- Tree-based
+- Neural networks (with multiple neurons in the output layer)
+- Naive Bayes
+</details>
+
+<details>
+<summary><b>Option 2: Reduce to binary classification problem</b></summary>
+
+- **One-vs-rest:** Train one classifier per class, with the samples of that class as positive samples and all others as negatives. 
+Final class is the class of the classifier reports the highest confidence score.
+  - Requires base classifiers to produce real-valued confidence score, rather than just class label
+  - Problem 1: Even if original class distribution is balanced, each learner will see unbalanced distributions with more negatives
+  - Problem 2: Scale of confidence values may differ between the binary classifiers
+- **One-vs-one:** If there are $k$ classes, train  $𝑘(𝑘−1)/2$ binary classifiers, one for each pair of classes, trained only to distinguish these two classes. 
+To make the final prediction, the class that got the most votes is chosen.
+  - Problem: Ambiguities in case of same number of votes for different classes
 </details>
