@@ -77,3 +77,49 @@ The $𝑘$-th partial autocorrelation coefficient is equal to the estimate of $\
 
 --> Used to find the order of the auto-regressive (AR) process
 </details>
+
+
+## [Autoregressive model (AR)](https://otexts.com/fpp2/AR.html)
+
+<details>
+<summary><b>Details</b></summary>
+
+An autoregressive model $AR(𝑝)$ of order $𝑝$ can be written as:
+
+$$𝑦_𝑡 = 𝑐 + \phi_1 𝑦_{t-1} + \phi_2 𝑦_{𝑡−2} + ... + \phi_𝑝 𝑦_{𝑡−𝑝} + \epsilon_𝑡$$
+ 
+where $\epsilon_𝑡$ is white noise. 
+Essentially a linear regression with lagged values of the time-series.
+
+Requires the time-series to be stationary.
+</details>
+
+
+## [Moving average model (MA)](https://otexts.com/fpp2/MA.html)
+
+<details>
+<summary><b>Details</b></summary>
+
+Rather than using past values of the forecast variable in a regression, a moving average model uses past forecast errors in a regression-like model. 
+A moving average model $MA(𝑞)$ of order $𝑞$ can be written as:
+
+$$𝑦_𝑡 = 𝑐 + \epsilon_𝑡 + \theta_1 \epsilon_{𝑡−1} + \theta_2 \epsilon_{𝑡−2} + ... + \theta_𝑞 \epsilon_{𝑡−𝑞}$$
+ 
+where $\epsilon_𝑡$ is white noise. 
+Note that we don't actually observe the values $\epsilon_𝑡$, so it's not really a regression in the usual sense. 
+Each value of $y_t$ can be thought of as a weighted moving average of the past $𝑞$ forecast errors.
+
+It's possible to write any stationary $AR(𝑝)$ model as a $MA(\inf)$ model. 
+For example for an $AR(1)$ model:
+
+$$
+\begin{align}
+𝑦_𝑡 &= \phi_1 𝑦_{𝑡−1} + \epsilon_𝑡
+    &= \phi_1 ( \phi_1 𝑦_{𝑡−1} + \epsilon_{𝑡−1} ) + \epsilon_t
+    &= \phi_1^2 𝑦_{𝑡−1} + \phi_1 \epsilon_{𝑡−1} + \epsilon_𝑡 ... 
+    &= \epsilon_𝑡 + \phi_1 \epsilon_{𝑡−1} + \phi_1^2 \epsilon_{𝑡−2} + \phi_1^3 \epsilon_{𝑡−3} + ...
+\end{align}
+$$
+ 
+The reverse holds under some constraints on the MA parameters, in which case the MA model is called **invertible**.
+</details>
