@@ -1,7 +1,7 @@
 The Shapley value is a solution concept in cooperative game theory that can be extended to general ML models in order to provide an intuition of how 'important' some features are.
 
 ## Knowledge prerequisites
-* [Partial Dependence](Partial Dependence and Individual Conditional Expectation plots) 
+* [Partial Dependence](Partial Dependence and Individual Conditional Expectation plots.md) 
 
 ## Must know
 #### Cooperative game theory
