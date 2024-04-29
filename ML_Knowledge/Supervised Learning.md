@@ -7,14 +7,14 @@
 
 # Classification (Regression): Support Vector Machines (SVM)
 
-## Resources
+### Resources
 
 - "The Elements of Statistical Learning" (Hastie, Tibshirani, Friedman), chapter 12
 - ["A Practical Guide to Support Vector Classification"](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
 - Linear kernel: [sklearn.svm.LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
 - More general implemention: [sklearn.svm.SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
 
-## Idea
+### Idea
 
 Solving a classification problem whose data is not linearly separable. 2 approaches:
 
@@ -23,7 +23,7 @@ Solving a classification problem whose data is not linearly separable. 2 approac
 
 SVM can be adapted also for regression problems (as well as multiclass classification problems)
 
-## Option 1: Allow misclassifications
+### Option 1: Allow misclassifications
 
 Set a "margin" that should ideally be achieved in the separation of the 2 classes. 
 Penalize every training point that's within this margin (both on the correct side or on the wrong side of the separating line). 
@@ -32,7 +32,7 @@ The sensitivity (i.e. the size of this margin) can be specified.
 An infinite sensitivity corresponds to the linearly separable case, where a low sensitivity also takes into consideration data further away from the decision boundary. 
 In this way, SVM can also make a better bias-variance tradeoff.
 
-## Option 2: Kernel methods
+### Option 2: Kernel methods
 
 The idea is to lift the feature space up to a higher dimensional space by applying transformation functions. 
 If $`\left\{ (x_i, y_i) \right\}_{i=1}^N`$ are the training data points and we have a transformation function $h$, 
