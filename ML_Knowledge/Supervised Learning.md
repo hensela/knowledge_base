@@ -131,3 +131,23 @@ If we estimate probabilities $𝑝(𝑥_𝑖)$ for examples $(𝑥_𝑖, 𝑦_�
 $$−\frac{1}{N} \sum_{𝑖=1}^𝑁{ \left[ 𝑦_𝑖 𝑙𝑜𝑔(𝑝(𝑥_𝑖))+(1−𝑦_𝑖) 𝑙𝑜𝑔 (1−𝑝(𝑥_𝑖)) \right] }$$
 </details>
 
+
+# Classification: How to handle imbalanced classes
+
+<details>
+<summary><b>Details</b></summary>
+
+Danger of imbalanced classes:
+
+If accuracy is the performance metric, the model might end up predicting always the same class
+
+
+Strategies to address imbalanced classes:
+
+- Up-sample minority class
+- Down-sample majority class
+- Change performance metric (i.e. AUC or precision instead of accuracy)
+- Penalize algorithms: Penalize miistakes on the minority class by an amount to how under-represented it is
+- Tree-based algorithms: Hierarchical structure allows them to learn signals from both classes
+- Data augmentation: Up-sample minority class by creating synthetic samples that slightly perturb feature values ([SMOTE](https://arxiv.org/pdf/1106.1813))
+</details>
