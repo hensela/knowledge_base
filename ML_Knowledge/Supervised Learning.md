@@ -84,7 +84,7 @@ We cannot use mean squared error as a loss function, as it's non-convex in this 
 </details>
 
 
-# Classification: Performance metrics¶
+# Classification: Performance metrics
 
 <details>
 <summary><b>Details</b></summary>
