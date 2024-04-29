@@ -25,7 +25,7 @@ $$𝑦_𝑡 = 𝑆_𝑡 * 𝑇_𝑡 * 𝑅_𝑡 \Leftrightarrow 𝑙𝑜𝑔(�
 <summary><b>Details</b></summary>
 
 A stationary time series is one whose properties do not depend on the time at which the series is observed:
-- constant mean ($leftrightarrow$ no trend)
+- constant mean ($\leftrightarrow$ no trend)
 - constant standard deviation
 - no seasonality
 
@@ -39,8 +39,8 @@ A time-series with cyclic behaviour (but no trend or seasonality) is stationary 
 **Log-transformation** can help stabilize the variance of a time-series.
 
 **Differencing** can help stabilise the mean of a time-series and eliminate/reduce trend and seasonality. 
-The differenced series is the change between consecutive observations $y'_t = y_t - y_{t-1}$
-- This can be applied multiple times, or there's also seasonal differencing $y'_t = y_t - y_{t-m}$ for $m \geq 1$.
+The differenced series is the change between consecutive observations $y_t' = y_t - y_{t-1}$
+- This can be applied multiple times, or there's also seasonal differencing $y_t' = y_t - y_{t-m}$ for $m \geq 1$.
 - If differencing is used, it's important that the differences are interpretable.
 
 How to test for stationarity:
