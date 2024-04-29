@@ -47,7 +47,7 @@ we rediscover an approximation to the argmin of the MSPE (mean squared percentag
 $`\begin{aligned} 
 \underset{\theta}{\mathrm{argmin}} (R)MSE(𝑙𝑜𝑔(𝑦), h_{\theta}(𝑥)) &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( log(y_i) - log(e^{h_{\theta}(x_i) }) \right)^2 }\\
     &= \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( log \left( \frac{y_i}{e^{h_{\theta}(x_i)}} \right) \right)^2 } \\
-    &\approx \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( 1 - \frac{y_i}{e^{h_{\theta}(x_i)}} \right)^2 } \text{ } \text{ (Taylor series expansion)}
+    &\approx \underset{\theta}{\mathrm{argmin}} \frac{1}{n} \sum_i{ \left( 1 - \frac{y_i}{e^{h_{\theta}(x_i)}} \right)^2 } \text{ } \text{ (Taylor series expansion)} \\
     &\approx \underset{\theta}{\mathrm{argmin}} MSPE \left( y,  e^{h_{\theta}(x_i)} \right)
 \end{aligned}`$ 
 
