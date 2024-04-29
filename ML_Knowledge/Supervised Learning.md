@@ -8,14 +8,12 @@
 # Classification (Regression): Support Vector Machines (SVM)
 
 <details>
-    <summary>
-    ### Resources
-    </summary>
+    <summary>### Resources</summary>
 
-- "The Elements of Statistical Learning" (Hastie, Tibshirani, Friedman), chapter 12
-  - ["A Practical Guide to Support Vector Classification"](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
-  - Linear kernel: [sklearn.svm.LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
-  - More general implemention: [sklearn.svm.SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
+    - "The Elements of Statistical Learning" (Hastie, Tibshirani, Friedman), chapter 12
+    - ["A Practical Guide to Support Vector Classification"](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
+    - Linear kernel: [sklearn.svm.LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
+    - More general implemention: [sklearn.svm.SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
 </details>
 
 ### Idea
