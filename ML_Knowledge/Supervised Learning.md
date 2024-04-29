@@ -35,15 +35,15 @@ In this way, SVM can also make a better bias-variance tradeoff.
 ## Option 2: Kernel methods
 
 The idea is to lift the feature space up to a higher dimensional space by applying transformation functions. 
-If $\{(𝑥_𝑖, 𝑦_𝑖)\}_{𝑖=1}^N$ are the training data points and we have a transformation function $h$, 
-then one can try to find a linear decision boundary for the higher-dimensional data $\{(h(x_i), y_i)\}_{i=1}^N$.
+If $\{ (x_i, y_i) \}_{i=1}^N$ are the training data points and we have a transformation function $h$, 
+then one can try to find a linear decision boundary for the higher-dimensional data $\{ (h(x_i), y_i) \}_{i=1}^N$.
 
 To solve this for more complex transformations (to possibly infinite dimensionsal spaces), SVM relies on the kernel trick: 
-Due to the mathematical formulation of the problem, one finds that we don't have to perform the actual feature transformations themselves (nor even specify the transformation function h), 
+Due to the mathematical formulation of the problem, one finds that we don't have to perform the actual feature transformations themselves (nor even specify the transformation function $h$), 
 but rather the optimization problem to solve requires only knowledge of the kernel function $K(x, x') = \langle h(x), h(x') \rangle$ that computes the inner products in the transformed space.
 
 Three popular choices for $K$ in the SVM literature are:
 
-- $d/text{th}$-Degree polynomial:  $K(x, x') = (1+ \langle x, x' \rangle)^d$
+- $d \text{th}$-Degree polynomial:  $K(x, x') = (1+ \langle x, x' \rangle)^d$
 - Radial basis:  $K(x, x') = exp(−\gamma ||x−x'||^2)$
 - Neural network:  $K(x, x') = tanh( \kappa_1 \langle x, x' \rangle + \kappa_2)$
