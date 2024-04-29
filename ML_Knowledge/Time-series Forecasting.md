@@ -1,4 +1,4 @@
-Time-series $(y_t)_{t \in \mathbb{N}$.
+Time-series $(y_t)_{t \in \mathbb{N}}$.
 
 
 ## [Time-series components](https://otexts.com/fpp2/components.html) and [patterns](https://otexts.com/fpp2/tspatterns.html)
