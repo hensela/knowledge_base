@@ -1,7 +1,7 @@
 # Classification: KNN: K-nearest neighbors
 
 <details>
-<summary><h3>Details</h3></summary>
+<summary><b>Details</b></summary>
 
 - Calculate distances between new input all the training data points
 - Sort the distances and determine the $𝑘$ nearest neighbors
@@ -13,7 +13,7 @@
 # Classification (Regression): Support Vector Machines (SVM)
 
 <details>
-<summary><h3>Resources</h3></summary>
+<summary><b>Resources</b></summary>
 
 - "The Elements of Statistical Learning" (Hastie, Tibshirani, Friedman), chapter 12
 - ["A Practical Guide to Support Vector Classification"](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
@@ -22,7 +22,7 @@
 </details>
 
 <details>
-<summary><h3>Idea</h3></summary>
+<summary><b>Idea</b></summary>
 
 Solving a classification problem whose data is not linearly separable. 2 approaches:
 
@@ -33,7 +33,7 @@ SVM can be adapted also for regression problems (as well as multiclass classific
 </details>
 
 <details>
-<summary><h3>Option 1: Allow misclassifications</h3></summary>
+<summary><b>Option 1: Allow misclassifications</b></summary>
 
 Set a "margin" that should ideally be achieved in the separation of the 2 classes. 
 Penalize every training point that's within this margin (both on the correct side or on the wrong side of the separating line). 
@@ -44,7 +44,7 @@ In this way, SVM can also make a better bias-variance tradeoff.
 </details>
 
 <details>
-<summary><h3>Option 2: Kernel methods</h3></summary>
+<summary><b>Option 2: Kernel methods</b></summary>
 
 The idea is to lift the feature space up to a higher dimensional space by applying transformation functions. 
 If $`\left\{ (x_i, y_i) \right\}_{i=1}^N`$ are the training data points and we have a transformation function $h$, 
