@@ -23,3 +23,13 @@ Hence, the fitted line, corresponds to the direction along which the variance of
 **Iterate** until convergence:
 1. Determine cluster centroid coordinates
 2. Determine distances of each data point to the centroids and reassign each data point to the closest cluster centroid
+
+
+# Clustering: Performance metrics
+
+- Evaluate supervised downstream tasks (where we have labelled data)
+- Understand "tightness" of the clusters:
+  - [Silhouette score](https://en.wikipedia.org/wiki/Silhouette_(clustering)): Distances of each point to other points within the same cluster and other points in other clusters (similar: [Dunn Index](https://en.wikipedia.org/wiki/Dunn_index)).
+  - Calinski Harabaz Index: Variance of a datapoint $𝑥$ w.r.t. datapoints within the same cluster vs. variance of $𝑥$ w.r.t. all other datapoints.
+  - [Davies-Bouldin Index](https://en.wikipedia.org/wiki/Davies%E2%80%93Bouldin_index): "Generalization" of the above 2 ideas for other distance metrics.
+- Perturbation: Slightly perturb a datapoint (according to some rules), make a prediction and check if it's still in the same cluster
