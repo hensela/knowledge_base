@@ -109,13 +109,13 @@ where $\epsilon_𝑡$ is white noise.
 Note that we don't actually observe the values $\epsilon_𝑡$, so it's not really a regression in the usual sense. 
 Each value of $y_t$ can be thought of as a weighted moving average of the past $𝑞$ forecast errors.
 
-It's possible to write any stationary $AR(𝑝)$ model as a $MA(\inf)$ model. 
+It's possible to write any stationary $AR(𝑝)$ model as a $MA(\infty)$ model. 
 For example for an $AR(1)$ model:
 
 $$`\begin{aligned}
-𝑦_𝑡 &= \phi_1 𝑦_{𝑡−1} + \epsilon_𝑡
-    &= \phi_1 ( \phi_1 𝑦_{𝑡−1} + \epsilon_{𝑡−1} ) + \epsilon_t
-    &= \phi_1^2 𝑦_{𝑡−1} + \phi_1 \epsilon_{𝑡−1} + \epsilon_𝑡 ... 
+𝑦_𝑡 &= \phi_1 𝑦_{𝑡−1} + \epsilon_𝑡 \\
+    &= \phi_1 ( \phi_1 𝑦_{𝑡−1} + \epsilon_{𝑡−1} ) + \epsilon_t \\
+    &= \phi_1^2 𝑦_{𝑡−1} + \phi_1 \epsilon_{𝑡−1} + \epsilon_𝑡 ... \\
     &= \epsilon_𝑡 + \phi_1 \epsilon_{𝑡−1} + \phi_1^2 \epsilon_{𝑡−2} + \phi_1^3 \epsilon_{𝑡−3} + ... 
 \end{aligned}`$$
  
