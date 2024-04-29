@@ -35,7 +35,7 @@ In this way, SVM can also make a better bias-variance tradeoff.
 ## Option 2: Kernel methods
 
 The idea is to lift the feature space up to a higher dimensional space by applying transformation functions. 
-If $\{ (x_i, y_i) \}_{i=1}^N$ are the training data points and we have a transformation function $h$, 
+If $\left\{ (x_i, y_i) \right\}_{i=1}^N$ are the training data points and we have a transformation function $h$, 
 then one can try to find a linear decision boundary for the higher-dimensional data $`\left\{ (h(x_i), y_i) \right\}_{i=1}^N`$.
 
 To solve this for more complex transformations (to possibly infinite dimensionsal spaces), SVM relies on the kernel trick: 
