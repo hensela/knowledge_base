@@ -1,4 +1,4 @@
-# Classification: KNN: K-nearest neighbors
+# Classification: K-nearest neighbors (KNN)
 
 <details>
 <summary><b>Details</b></summary>
@@ -60,3 +60,32 @@ Three popular choices for $K$ in the SVM literature are:
 - Radial basis:  $K(x, x') = exp(−\gamma ||x−x'||^2)$
 - Neural network:  $K(x, x') = tanh( \kappa_1 \langle x, x' \rangle + \kappa_2)$
 </details>
+
+
+# Classification: Logistic Regression
+
+<details>
+<summary><b>Details</b></summary>
+
+Training observations $`\left\{ (x(i),y(i)) \right\}_{i=1}^N`$, each of which having $m$ features $`x^i = \left\( x_1^i,..., x_m^i /in /mathbb{R}^m`$.
+We fit a linear regression model:
+
+$$`
+z_i = /theta_0 + /theta_1 x_1^i +...+ /theta_𝑚 x_m^i
+`$$
+ 
+Our prediction will be (sigmoid function):
+
+$$`
+h_{/theta} \left\( x^i \right\) = \frac{1}{1 + e^{−z^i}
+`$$
+
+The cost function to use is the log-loss / binary cross-entropy:
+
+$$`
+J(/theta) = −/frac{1}{𝑁} /sum_{i=1}^{N} { \left\[ y_i log( h_{/theta} (x^i) + (1−y_i) log(1 − h_{/theta}(x^i))]
+`$$
+ 
+We cannot use mean squared error as a loss function, as it's non-convex in this case and has many local minima.
+</details>
+
