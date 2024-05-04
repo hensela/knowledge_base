@@ -15,7 +15,9 @@
   * [[Concurrency and parallel computing|Concurrency and parallel computing]]
 
 
+
 **Ideas for addition:**
+* Supervised learning: Overview of different loss functions and error metrics with their trade-offs
 * [Lifetime value modeling via BG/NBD](https://towardsdatascience.com/customer-lifetime-value-estimation-via-probabilistic-modeling-d5111cb52dd)
 * Deep learning basics:
   * Summary of backpropagation
@@ -23,3 +25,4 @@
   * ...
 * Statistics
   * Summary of different hypothesis tests
+* Bayesian models
