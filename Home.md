@@ -26,5 +26,7 @@
   * Different activation functions and their use-cases and pros/cons
   * ...
 * Statistics
+  * Type I vs Type II errors
   * Summary of different hypothesis tests
+  * Mixed linear models
 * Bayesian models
