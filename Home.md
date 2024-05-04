@@ -13,3 +13,13 @@
     * [[Shapley values|Shapley values]]
 * Software Engineering
   * [[Concurrency and parallel computing|Concurrency and parallel computing]]
+
+
+**Ideas for addition:**
+* [Lifetime value modeling via BG/NBD](https://towardsdatascience.com/customer-lifetime-value-estimation-via-probabilistic-modeling-d5111cb52dd)
+* Deep learning basics:
+  * Summary of backpropagation
+  * Different activation functions and their use-cases and pros/cons
+  * ...
+* Statistics
+  * Summary of different hypothesis tests
